@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fortunettes</title>
+
+    <!-- General Styling -->
+    <link type="text/css" rel="stylesheet" href="framework/style/reset.css">
+    <link type="text/css" rel="stylesheet" href="framework/style/frame.css">
+    <link type="text/css" rel="stylesheet" href="framework/style/general.css">
+    <link type="text/css" rel="stylesheet" href="lib/jquery.tooltip.css">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+    <!-- mixed -->
+    <link type="text/css" rel="stylesheet" href="look_and_feels/mixed/mixed_button.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/mixed/mixed_checkbox.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/mixed/mixed_radio_button.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/mixed/mixed_textbox.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/mixed/mixed_selection_hybrid.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/mixed/mixed_slider.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/mixed/mixed_panel.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/mixed/mixed_tab.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/mixed/mixed_listbox.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/mixed/mixed_label.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/mixed/mixed_widget.css">
+
+    <!-- blue -->
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_button.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_checkbox.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_radio_button.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_textbox.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_selection_hybrid.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_slider.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_panel.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_tab.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_listbox.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_label.css">
+    <link type="text/css" rel="stylesheet" href="look_and_feels/blue/blue_widget.css">
+
+    <!-- Use Case Styling -->
+    <link type="text/css" rel="stylesheet" href="cases/demo/pizza/a/style.css">
+</head>
+<body>
+    <div class="header" id="header">
+        <div class="header_content">
+            <h1>Fortunettes</h1>
+            <p>An enhanced set of widgets that are capable of visualizing their future state, which helps users to understand what will happen without committing to an action.  In our evaluation, we found that users require less clicks to achieve tasks and are more confident about their actions when feedforward information was available. These findings suggest that widget-level feedforward is highly suitable in applications the user is unfamiliar with, or when high confidence is desirable.</p>
+            <p class="contact">
+                <a href="mailto:sven.coppers@uhasselt.be">Sven Coppers</a><sup>1,2</sup>,
+                <a href="mailto:kris.luyten@uhasselt.be">Kris Luyten</a><sup>1,2</sup>,
+                <a href="mailto:davy.vanacken@uhasselt.be">Davy Vanacken</a><sup>1,2</sup>,
+                <a href="mailto:navarre@irit.fr">David Navarre</a><sup>3</sup>,
+                <a href="mailto:palanque@irit.fr">Philippe Palanque</a><sup>3,4</sup>,
+                <a href="mailto:christine.gris@airbus.com">Christine Gris</a><sup>5</sup>
+            </p>
+            <p class="contact">
+                Publications:
+                <a href="https://dl.acm.org/doi/10.1145/3331162"><img class="icon" src="img/pdf.png" /> EICS '19</a>,
+                <a href="http://researcharchive.wintec.ac.nz/7211/1/FMIS%202019%20informal%20v2.pdf#page=57"><img class="icon" src="img/pdf.png" /> FMIS '19</a>,
+                <a href="https://academic.oup.com/iwc/advance-article/doi/10.1093/iwcomp/iwab014/6277976?guestAccessKey=4e5c3198-1311-4524-840f-022107f47385"><img class="icon" src="img/pdf.png" /> IwC '21</a>
+            </p>
+            <div class="logos">
+                <sup>1</sup><a href="https://www.uhasselt.be/edm"><img class="logo" src="img/uhasselt-edm.png" /></a>
+                <sup>2</sup><a href="https://www.uhasselt.be/edm"><img class="logo" src="img/fm.png" /></a>
+                <sup>3</sup><a href="https://www.uhasselt.be/edm"><img class="logo" src="img/toulouse.png" /></a>
+                <sup>4</sup><a href="https://www.uhasselt.be/edm"><img class="logo" src="img/tue.jpg" /></a>
+                <sup>5</sup><a href="https://www.uhasselt.be/edm"><img class="logo" src="img/airbus.png" /></a>
+            </div>
+        </div>
+        <div class="column_names">
+            <div class="column_name"><h2>Standard Widgets</h2></div>
+            <div class="column_name"><h2>Fortunettes</h2></div>
+            <div class="column_name"><h2>Fortunettes 2.0</h2></div>
+        </div>
+    </div>
+
+
+
+<div class="use_cases">
+<h1>Checkboxes</h1>
+<div class="use_case" id="checkboxes">
+    <div class="look_and_feel">
+        <input type="checkbox" name="day" value="monday" id="monday"><label for="monday">Monday</label><br>
+        <input type="checkbox" name="day" value="tuesday" id="tuesday"><label for="tuesday">Tuesday</label><br>
+        <input type="checkbox" name="day" value="wednesday" id="wednesday"><label for="wednesday">Wednesday</label><br>
+        <input type="checkbox" name="day" value="thursday" id="thursday"><label for="thursday">Thursday</label><br>
+    </div>
+</div>
+<h1>Radio buttons</h1>
+<!--<h1>List 2</h1>-->
+<div class="use_case" id="radio_buttons">
+    <div class="look_and_feel">
+        <input type="radio" name="knowledge" value="expert" id="expert"><label for="expert">Expert</label><br>
+        <input type="radio" name="knowledge" value="knowledgeable" id="knowledgeable"><label for="knowledgeable">Knowledgeable</label><br>
+        <input type="radio" name="knowledge" value="passing" id="passing"><label for="passing">Passing</label><br>
+        <input type="radio" name="knowledge" value="no_knowledge" id="no_knowledge"><label for="no_knowledge">No knowledge</label><br>
+    </div>
+</div>
+<h1>Buttons</h1>
+<div class="use_case" id="buttons_remake">
+    <div class="look_and_feel">
+        <button id="a">A</button>
+        <button id="b">B</button>
+        <button id="c">C</button>
+        <button id="d">D</button>
+    </div>
+</div>
+<h1>Listboxes</h1>
+<div class="use_case" id="listboxes">
+    <div class="look_and_feel">
+       <select name="cars" size="5" id="select_single">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+            <option value="audi">BMW</option>
+            <option value="audi">Opel</option>
+            <option value="audi">Kia</option>
+            <option value="audi">Ford</option>
+        </select>
+    </div>
+</div>
+<h1>Listboxes (multiple select)</h1>
+<p>Use CTRL or SHIFT to select multiple items</p>
+<div class="use_case" id="listboxes_multi">
+    <div class="look_and_feel">
+        <select name="cars_multi" size="5" id="cars_multi" multiple>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+            <option value="audi">BMW</option>
+            <option value="audi">Opel</option>
+            <option value="audi">Kia</option>
+            <option value="audi">Ford</option>
+        </select>
+    </div>
+</div>
+<h1>Accepting the terms</h1>
+<div class="use_case" id="legal">
+    <div class="look_and_feel">
+        <input type="checkbox" name="agree" value="agree" id="agree"><label for="agree">I agree to the terms of service</label>
+        <button id="next_step">Confirm</button>
+    </div>
+</div>
+<h1>Make your own pizza!</h1>
+<div class="use_case" id="pizza">
+    <div class="look_and_feel">
+        <p>Classics</p>
+        <input type="radio" name="pizza" value="margerita" id="margerita"><label for="margerita">Margerita</label><br>
+        <input type="radio" name="pizza" value="hawaii" id="hawaii"><label for="hawaii">Hawaii</label><br>
+        <input type="radio" name="pizza" value="custom" id="custom"><label for="custom">Custom toppings</label><br>
+
+        <p>Choose some pizza toppings</p>
+        <div class="selection_hybrid" id="selection_mushrooms">Mushrooms</div>
+        <div class="selection_hybrid" id="selection_cheese">Cheese</div>
+        <div class="selection_hybrid" id="selection_olives">Olives</div>
+        <div class="selection_hybrid" id="selection_pepperoni">Pepperoni</div>
+        <div class="selection_hybrid" id="selection_ham">Ham</div>
+        <div class="selection_hybrid" id="selection_pineapple">Pineapple</div>
+        <p>Price</p>
+        <input type="text" id="price" value="10"/>
+    </div>
+</div>
+<h1>Find the right conference for your work</h1>
+<div class="use_case" id="conferences_case">
+    <div class="look_and_feel">
+        <h2>Input: Publication Keywords</h2>
+        <p>Choose one or more keywords</p>
+        <input type="checkbox" name="keywords" value="toolkit" id="toolkit"><label for="toolkit">Toolkit</label><br>
+        <input type="checkbox" name="keywords" value="hardware" id="hardware"><label for="hardware">Hardware</label><br>
+        <input type="checkbox" name="keywords" value="software" id="software"><label for="software">Software</label><br>
+        <input type="checkbox" name="keywords" value="ar" id="ar"><label for="ar">Augmented Reality</label><br>
+        <input type="checkbox" name="keywords" value="vr" id="vr"><label for="vr">Virtual Reality</label><br>
+        <input type="checkbox" name="keywords" value="sa" id="sa"><label for="sa">Software Architecture</label><br>
+        <input type="checkbox" name="keywords" value="usability" id="usability"><label for="usability">Usability</label><br>
+
+        <h2>Output: Relevant Conferences (not editable)</h2>
+        <select name="conferences" size="4" id="conferences" multiple>
+            <option value="uist">UIST</option>
+            <option value="chi">CHI</option>
+            <option value="dis">DIS</option>
+            <option value="eics">EICS</option>
+        </select>
+    </div>
+</div>
+<div class="use_case" id="sv">
+    <div class="look_and_feel">
+        <h1>Volunteer for tasks</h1>
+        <table>
+            <tr>
+                <th>Task</th>
+                <th>Bidding Priority</th>
+            </tr>
+            <tr>
+                <td>Bag Stuffing</td>
+                <td class="task_item" id="bag">
+                    <div class="selection_hybrid" id="bag_1">1</div>
+                    <div class="selection_hybrid" id="bag_2">2</div>
+                    <div class="selection_hybrid" id="bag_3">3</div>
+                    <div class="selection_hybrid" id="bag_x">x</div>
+                </td>
+            </tr>
+            <tr class="task_item">
+                <td>Quick Response</td>
+                <td class="task_item" id="quick">
+                    <div class="selection_hybrid" id="quick_1">1</div>
+                    <div class="selection_hybrid" id="quick_2">2</div>
+                    <div class="selection_hybrid" id="quick_3">3</div>
+                    <div class="selection_hybrid" id="quick_x">x</div>
+                </td>
+            </tr>
+            <tr class="task_item">
+                <td>Registration</td>
+                <td class="task_item" id="reg">
+                    <div class="selection_hybrid" id="reg_1">1</div>
+                    <div class="selection_hybrid" id="reg_2">2</div>
+                    <div class="selection_hybrid" id="reg_3">3</div>
+                    <div class="selection_hybrid" id="reg_x">x</div>
+                </td>
+            </tr>
+            <tr class="task_item">
+                <td>Videographer</td>
+                <td class="task_item" id="video">
+                    <div class="selection_hybrid" id="video_1">1</div>
+                    <div class="selection_hybrid" id="video_2">2</div>
+                    <div class="selection_hybrid" id="video_3">3</div>
+                    <div class="selection_hybrid" id="video_x">x</div>
+                </td>
+            </tr>
+            <tr class="task_item">
+                <td>Door Monitor</td>
+                <td class="task_item" id="door">
+                    <div class="selection_hybrid" id="door_1">1</div>
+                    <div class="selection_hybrid" id="door_2">2</div>
+                    <div class="selection_hybrid" id="door_3">3</div>
+                    <div class="selection_hybrid" id="door_x">x</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="use_case" id="cars">
+    <div class="look_and_feel">
+        <h1>Car configurator</h1>
+        <p>Model</p>
+        <div class="selection_hybrid" id="model_75d">75D</div>
+        <div class="selection_hybrid" id="model_100d">100D</div>
+        <div class="selection_hybrid" id="model_p100d">P100D</div>
+
+        <p>Suspension</p>
+        <div class="selection_hybrid" id="suspension_basic">Basic</div>
+        <div class="selection_hybrid" id="suspension_smart">Smart Air Suspension</div>
+
+        <p>Autopilot</p>
+        <div class="selection_hybrid" id="pilot_none">None</div>
+        <div class="selection_hybrid" id="pilot_auto">Autopilot</div>
+        <div class="selection_hybrid" id="pilot_driving">Self-driving</div>
+    </div>
+</div>
+</div>
+</body>
+<!-- Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="lib/easytimer.min.js"></script>
+<script src="lib/jquery.tooltip.js"></script>
+<script src="demo_page.js"></script>
+
+<!-- Helpers -->
+<script src="framework/helpers/array.js"></script>
+<script src="framework/helpers/string.js"></script>
+<script src="framework/helpers/logger.js"></script>
+<script src="framework/helpers/time.js"></script>
+<script src="framework/globals.js"></script>
+
+<!-- Models -->
+<script src="framework/widgets/widget_state.js"></script>
+<script src="framework/widgets/selectable_widget_state.js"></script>
+<script src="framework/widgets/button_state.js"></script>
+<script src="framework/widgets/radio_button_state.js"></script>
+<script src="framework/widgets/radio_group_state.js"></script>
+<script src="framework/widgets/checkbox_state.js"></script>
+<script src="framework/widgets/checkbox_group_state.js"></script>
+<script src="framework/widgets/textbox_state.js"></script>
+<script src="framework/widgets/selection_hybrid_state.js"></script>
+<script src="framework/widgets/slider_state.js"></script>
+<script src="framework/widgets/listbox_state.js"></script>
+<script src="framework/widgets/panel_state.js"></script>
+<script src="framework/widgets/tab_state.js"></script>
+<script src="framework/widgets/label_state.js"></script>
+<script src="framework/widgets/tab_group_state.js"></script>
+
+<script src="framework/model/state_machine.js"></script>
+<script src="framework/model/state_machine_reader.js"></script>
+<script src="framework/model/application_state.js"></script>
+<script src="framework/model/transition.js"></script>
+<script src="framework/model/gui_event.js"></script>
+<script src="framework/model/listbox_event.js"></script>
+<script src="framework/model/history_stack.js"></script>
+
+<!-- Framework -->
+<script src="framework/controller.js"></script>
+<script src="framework/look_and_feel.js"></script>
+<script src="framework/widget_factory.js"></script>
+<script src="framework/main_window.js"></script>
+<script src="framework/main_window_state.js"></script>
+
+<!-- Generic Widgets -->
+<script src="framework/widgets/widget.js"></script>
+<script src="framework/widgets/selectable_widget.js"></script>
+<script src="framework/widgets/panel.js"></script>
+<script src="framework/widgets/button.js"></script>
+<script src="framework/widgets/radio_button.js"></script>
+<script src="framework/widgets/radio_group.js"></script>
+<script src="framework/widgets/checkbox.js"></script>
+<script src="framework/widgets/checkbox_group.js"></script>
+<script src="framework/widgets/textbox.js"></script>
+<script src="framework/widgets/listbox.js"></script>
+<script src="framework/widgets/selection_hybrid.js"></script>
+<script src="framework/widgets/slider.js"></script>
+<script src="framework/widgets/tab.js"></script>
+<script src="framework/widgets/tab_group.js"></script>
+<script src="framework/widgets/label.js"></script>
+
+<!-- mixed -->
+<script src="look_and_feels/mixed/mixed_look_and_feel.js"></script>
+<script src="look_and_feels/mixed/mixed_panel.js"></script>
+<script src="look_and_feels/mixed/mixed_button.js"></script>
+<script src="look_and_feels/mixed/mixed_checkbox.js"></script>
+<script src="look_and_feels/mixed/mixed_checkbox_group.js"></script>
+<script src="look_and_feels/mixed/mixed_radio_button.js"></script>
+<script src="look_and_feels/mixed/mixed_radio_group.js"></script>
+<script src="look_and_feels/mixed/mixed_selection_hybrid.js"></script>
+<script src="look_and_feels/mixed/mixed_slider.js"></script>
+<script src="look_and_feels/mixed/mixed_tab.js"></script>
+<script src="look_and_feels/mixed/mixed_tab_group.js"></script>
+<script src="look_and_feels/mixed/mixed_textbox.js"></script>
+<script src="look_and_feels/mixed/mixed_listbox.js"></script>
+<script src="look_and_feels/mixed/mixed_label.js"></script>
+
+<!-- blue -->
+<script src="look_and_feels/blue/blue_look_and_feel.js"></script>
+<script src="look_and_feels/blue/blue_panel.js"></script>
+<script src="look_and_feels/blue/blue_button.js"></script>
+<script src="look_and_feels/blue/blue_checkbox.js"></script>
+<script src="look_and_feels/blue/blue_checkbox_group.js"></script>
+<script src="look_and_feels/blue/blue_radio_button.js"></script>
+<script src="look_and_feels/blue/blue_radio_group.js"></script>
+<script src="look_and_feels/blue/blue_selection_hybrid.js"></script>
+<script src="look_and_feels/blue/blue_slider.js"></script>
+<script src="look_and_feels/blue/blue_tab.js"></script>
+<script src="look_and_feels/blue/blue_tab_group.js"></script>
+<script src="look_and_feels/blue/blue_textbox.js"></script>
+<script src="look_and_feels/blue/blue_listbox.js"></script>
+<script src="look_and_feels/blue/blue_label.js"></script>
+
+<!-- Controllers -->
+<script src="cases/widgets/checkboxes/controller.js"></script>
+<script src="cases/widgets/radio_buttons/controller.js"></script>
+<script src="cases/widgets/buttons_remake/controller.js"></script>
+<script src="cases/widgets/listboxes/controller.js"></script>
+<script src="cases/widgets/listboxes_multi/controller.js"></script>
+<script src="cases/demo/legal/controller.js"></script>
+<script src="cases/demo/pizza/a/controller.js"></script>
+<script src="cases/demo/conferences/a/controller.js"></script>
+<script src="cases/demo/sv/a/controller.js"></script>
+<script src="cases/demo/cars/a/controller.js"></script>
+
+<script>
+    var root = '';
+    var logger = new Logger();
+    lookAndFeels.push('mixed');
+    lookAndFeels.push('mixed');
+    lookAndFeels.push('blue');
+    lookAndFeelModes.push('none');
+    lookAndFeelModes.push('some');
+    lookAndFeelModes.push('some');
+</script>
+</html>

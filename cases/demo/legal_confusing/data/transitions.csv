@@ -1,0 +1,6 @@
+state_old,id,event,state_new
+S0,agree,event_selected,S1
+S0,subscribe,event_selected,S0
+S1,agree,event_deselected,S0
+S1,next_step,event_click,S0
+S1,subscribe,event_selected,S1

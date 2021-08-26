@@ -1,0 +1,112 @@
+<div class="use_case" id="ide">
+    <div class="look_and_feel">
+        <h1>Graphical Studio Installer</h1>
+        <div class="tab_group" id="checkout_flow">
+            <div class="tab" id="tab_workloads">
+                <div class="tab_header">Workloads</div>
+                <div class="tab_content">
+                    <p class="workload_category">Operating System</p>
+                    <div class="selection_hybrid workload_item" id="workload_net">
+                        <p class="workload_title">.Net desktop development</p>
+                        <p class="workload_description">Build WPF, Windows Forms, and console applications using C#, Visual Basic and F#.</p>
+                    </div>
+                    <div class="selection_hybrid workload_item" id="workload_desktop">
+                        <p class="workload_title">Desktop development with C++</p>
+                        <p class="workload_description">Build Windows desktop applications using the Microsoft C++ toolset, ATL, or MFC.</p>
+                    </div>
+                    <div class="selection_hybrid workload_item" id="workload_uwp">
+                        <p class="workload_title">Universal Windows Platform development</p>
+                        <p class="workload_description">Create applications for the Universal Windows Platform with C#, VB, JavaScript, or optionally C++.</p>
+                    </div>
+                    <p class="workload_category">Web & Cloud</p>
+                    <div class="selection_hybrid workload_item" id="workload_asp">
+                        <p class="workload_title">ASP.NET and web development</p>
+                        <p class="workload_description">Build web applications using ASP.NET, ASP.NET Core, HTML/JavaScript, and Containers including Docker support.</p>
+                    </div>
+                    <div class="selection_hybrid workload_item" id="workload_azure">
+                        <p class="workload_title">Azure development</p>
+                        <p class="workload_description">Azure SDKs, tools, and projects for developing cloud apps, creating resources, and rebuilding Containers including...</p>
+                    </div>
+                    <div class="selection_hybrid workload_item" id="workload_python">
+                        <p class="workload_title">Python development</p>
+                        <p class="workload_description">Editing, debugging, interactive development and source control for Python.</p>
+                    </div>
+                    <div class="selection_hybrid workload_item" id="workload_node">
+                        <p class="workload_title">Node.js development</p>
+                        <p class="workload_description">Build scalable network applications using Node.js, an asynchronous event-driven JavaScript runtime.</p>
+                    </div>
+                    <p class="workload_category">Mobile & Gaming</p>
+                    <div class="selection_hybrid workload_item" id="workload_unity">
+                        <p class="workload_title">Game development with Unity</p>
+                        <p class="workload_description">Create 2D and 3D games with Unity, a powerful cross-platform development environment.</p>
+                    </div>
+                    <div class="selection_hybrid workload_item" id="workload_mobile">
+                        <p class="workload_title">Mobile development with JavaScript</p>
+                        <p class="workload_description">Build Android, iOS and UWP apps using Tools for Apache Cordova.</p>
+                    </div>
+                    <p class="workload_category">Other toolsets</p>
+                    <div class="selection_hybrid workload_item" id="workload_linux">
+                        <p class="workload_title">Linux development with C++</p>
+                        <p class="workload_description">Create and debug applications running in a Linux environment.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab" id="tab_components">
+                <div class="tab_header">Individual Components</div>
+                <div class="tab_content">
+                    <p class="workload_category">.NET</p>
+                    <input type="checkbox" name="net_framework" value="net_core_runtime" id="net_core_runtime"><label for="net_core_runtime">.Net Core runtime</label><br>
+                    <input type="checkbox" name="net_framework" value="net_4" id="net_4"><label for="net_4">.Net Framework 4 targeting pack</label><br>
+                    <input type="checkbox" name="net_framework" value="net_4.5" id="net_4.5"><label for="net_4.5">.Net Framework 4.5 targeting pack</label><br>
+                    <input type="checkbox" name="net_framework" value="net_4.5.1" id="net_4.5.1"><label for="net_4.5.1">.Net Framework 4.5.1 targeting pack</label><br>
+                    <input type="checkbox" name="net_framework" value="net_4.5.2" id="net_4.5.2"><label for="net_4.5.2">.Net Framework 4.5.2 targeting pack</label><br>
+                    <input type="checkbox" name="net_framework" value="net_4.6" id="net_4.6"><label for="net_4.6">.Net Framework 4.6 targeting pack</label><br>
+                    <input type="checkbox" name="net_framework" value="net_4.6.1_sdk" id="net_4.6.1_sdk"><label for="net_4.6.1_sdk">.Net Framework 4.6.1 SDK</label><br>
+                    <input type="checkbox" name="net_framework" value="net_4.6.1" id="net_4.6.1"><label for="net_4.6.1">.Net Framework 4.6.1 targeting pack</label><br>
+                    <input type="checkbox" name="net_framework" value="net_4.6.1" id="net_4.7.1"><label for="net_4.7.1">.Net Framework 4.7.1 targeting pack</label><br>
+                    <input type="checkbox" name="net_framework" value="net_native" id="net_native"><label for="net_native">.Net Native</label><br>
+                    <input type="checkbox" name="net_framework" value="net_portable" id="net_portable"><label for="net_portable">.Net Portable Library targeting pack</label><br>
+                    <p class="workload_category">Cloud, database, and server</p>
+                    <input type="checkbox" name="cloud" value="azure_authoring" id="azure_authoring"><label for="azure_authoring">Azure Authoring Tools</label><br>
+                    <input type="checkbox" name="cloud" value="azure_compute" id="azure_compute"><label for="azure_compute">Azure Compute Emulator</label><br>
+                    <input type="checkbox" name="cloud" value="cloud_explorer" id="cloud_explorer"><label for="cloud_explorer">Cloud Explorer</label><br>
+                    <input type="checkbox" name="cloud" value="sql_server_db" id="sql_server_db"><label for="sql_server_db">SQL Server Express 2016 Local DB</label><br>
+                    <input type="checkbox" name="cloud" value="sql_server_client" id="sql_server_client"><label for="sql_server_client">SQL Server Native Client</label><br>
+                    <input type="checkbox" name="cloud" value="data_sources" id="data_sources"><label for="data_sources">Data sources and service references</label><br>
+                    <input type="checkbox" name="cloud" value="web_deploy" id="web_deploy"><label for="web_deploy">Web deploy</label><br>
+                    <p class="workload_category">Code tools</p>
+                    <input type="checkbox" name="code_tools" value="class_designer" id="class_designer"><label for="class_designer">Class Designer</label><br>
+                    <input type="checkbox" name="code_tools" value="code_map" id="code_map"><label for="code_map">Code Map</label><br>
+                    <input type="checkbox" name="code_tools" value="nuget" id="nuget"><label for="nuget">NuGet package Manager</label><br>
+                    <input type="checkbox" name="code_tools" value="static_analysis" id="static_analysis"><label for="static_analysis">Static analysis tools</label><br>
+                    <p class="workload_category">Compilers, build tools, and runtimes</p>
+                    <input type="checkbox" name="compilers" value="net_compiler" id="net_compiler"><label for="net_compiler">.Net Compile Platforms SDK</label><br>
+                    <input type="checkbox" name="compilers" value="roslyn_compiler" id="roslyn_compiler"><label for="roslyn_compiler">C# and Visual Basic Roslyn compilers</label><br>
+                    <input type="checkbox" name="compilers" value="ms_build" id="ms_build"><label for="ms_build">MSBuild</label><br>
+                    <input type="checkbox" name="compilers" value="python_2" id="python_2"><label for="python_2">Python 2 64-bit (2.7.14)</label><br>
+                    <input type="checkbox" name="compilers" value="python_3" id="python_3"><label for="python_3">Python 3 64-bit (3.6.6)</label><br>
+                    <input type="checkbox" name="compilers" value="vc_tools" id="vc_tools"><label for="vc_tools">VC++ 2017 version 15.9 v14.16 latest v141 tools</label><br>
+                    <input type="checkbox" name="compilers" value="vc_redistributable" id="vc_redistributable"><label for="vc_redistributable">Visual C++ 2017 Redistributable Update</label><br>
+                    <input type="checkbox" name="compilers" value="vc_cmake" id="vc_cmake"><label for="vc_cmake">Visual C++ tools for CMake</label><br>
+                    <p class="workload_category">Debugging</p>
+                    <input type="checkbox" name="debugging" value="net_profiling" id="net_profiling"><label for="net_profiling">.NET Profiling tools</label><br>
+                    <input type="checkbox" name="debugging" value="profiling" id="profiling"><label for="profiling">C++ Profiling tools</label><br>
+                    <input type="checkbox" name="debugging" value="intellitrace" id="intellitrace"><label for="intellitrace">IntelliTrace</label><br>
+                    <input type="checkbox" name="debugging" value="js_diagnostics" id="js_diagnostics"><label for="js_diagnostics">JavaScript diagnostics</label><br>
+                    <p class="workload_category">Development activities</p>
+                    <input type="checkbox" name="activities" value="vs_core" id="vs_core"><label for="vs_core">Visual Studio C++ Core Features</label><br>
+                    <input type="checkbox" name="activities" value="c_sharp" id="c_sharp"><label for="c_sharp">C# and Visual Basic</label><br>
+                    <p class="workload_category">Games and Graphics</p>
+                    <input type="checkbox" name="games" value="unity" id="unity"><label for="unity">Unity 2018.3 64-bit Editor</label><br>
+                    <input type="checkbox" name="games" value="unity_tools" id="unity_tools"><label for="unity_tools">Visual Studio Tools for Unity</label><br>
+                    <p class="workload_category">SDKs, libraries and frameworks</p>
+                    <input type="checkbox" name="activities" value="graphical_tools" id="graphical_tools"><label for="graphical_tools">Graphical Tools Windows 8.1 SDK</label><br>
+                    <input type="checkbox" name="activities" value="windows_sdk_10240" id="windows_sdk_10240"><label for="windows_sdk_10240">Windows 10 SDK (10.0.10240.0)</label><br>
+                    <input type="checkbox" name="activities" value="windows_sdk_14393" id="windows_sdk_14393"><label for="windows_sdk_14393">Windows 10 SDK (10.0.14393.0)</label><br>
+                    <input type="checkbox" name="activities" value="windows_sdk_17134" id="windows_sdk_17134"><label for="windows_sdk_17134">Windows 10 SDK (10.0.17134.0)</label><br>
+                    <input type="checkbox" name="activities" value="windows_sdk_17763" id="windows_sdk_17763"><label for="windows_sdk_17763">Windows 10 SDK (10.0.17763.0)</label><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

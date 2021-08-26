@@ -1,0 +1,43 @@
+.button {
+    border: none;
+    position: relative;
+    display: inline-block;
+    padding: 0px;
+    margin-right: 3px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.button .label {
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.button .state {
+    position: absolute;
+    top: 0px;
+    border: 1px solid black;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    overflow: visible;
+    height: 100%;
+}
+
+.button .state.disabled {
+    background-color: dodgerblue;
+}
+
+.button .state.next.ongoing {
+    border-right: 0px;
+}
+
+.button:not(.disabled):hover .state.current {
+    background-color: #33c5ff;
+}

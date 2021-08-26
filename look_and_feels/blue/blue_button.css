@@ -1,0 +1,49 @@
+.blue .button {
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    display: inline-block;
+    height: 16px;
+    margin-top: 5px;
+    position: relative;
+}
+
+.blue .button.disabled {
+    border-style: dashed;
+    color: lightgrey;
+    border-color: lightgrey;
+    cursor: default;
+}
+
+.blue .button:active:not(.disabled) {
+    border-color: #999999;
+    color: #999999;
+}
+
+.blue .button.feedforward_enabled {
+    border-color: #33c5ff;
+    border-style: solid;
+}
+
+.blue .button.feedforward_disabled {
+    border-color: #555555;
+    border-style: dashed;
+    background-color: #f9f9f9;
+}
+
+.blue .button #limbo_what_if {
+    top: 25px;
+    left: 0px;
+}
+
+.blue .button #limbo_what_if:before {
+     top: -13px;
+ }
+
+.blue .button #help_button {
+
+}

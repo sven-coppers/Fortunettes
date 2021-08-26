@@ -1,0 +1,105 @@
+<div class="use_case" id="webshop">
+    <div class="look_and_feel">
+        <h1>Webshop</h1>
+        <div class="tab_group" id="checkout_flow">
+            <div class="tab" id="tab_cart">
+                <div class="tab_header">Cart</div>
+                <div class="tab_content">
+                    <table>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                        </tr>
+                        <tr>
+                            <td>FitByte Smart Watch</td>
+                            <td>$199.95</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Spilip Airfryer XXL</td>
+                            <td>$349.95</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="total">
+                            <td>Total</td>
+                            <td>$549.90</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <button class="proceed_button" id="proceed_address">Proceed</button>
+                </div>
+            </div>
+            <div class="tab" id="tab_address">
+                <div class="tab_header">Address</div>
+                <div class="tab_content">
+                    <p>Choose a billing address:</p>
+                    <input type="radio" name="billing_address" value="billing_home" id="billing_home"><label for="billing_home">Home - Los Angeles (United States)</label><br>
+                    <input type="radio" name="billing_address" value="billing_work" id="billing_work"><label for="billing_work">Work - Hawaii (United States)</label>
+                    <p></p>
+                    <p>Choose a shipping address:</p>
+                    <input type="radio" name="shipping_address" value="shipping_home" id="shipping_home"><label for="shipping_home">Home - Los Angeles (United States)</label><br>
+                    <input type="radio" name="shipping_address" value="shipping_work" id="shipping_work"><label for="shipping_work">Work - Hawaii (United States)</label>
+
+                    <button class="proceed_button" id="proceed_shipping">Proceed</button>
+                </div>
+            </div>
+            <div class="tab" id="tab_shipping">
+                <div class="tab_header">Shipping</div>
+                <div class="tab_content">
+                    <p>Choose a shipping method:</p>
+                    <input type="radio" name="shipping_method" value="shipping_express" id="shipping_express"><label for="shipping_express">Express delivery</label><br>
+                    <input type="radio" name="shipping_method" value="shipping_standard" id="shipping_standard"><label for="shipping_standard">Standard delivery</label>
+                    <button class="proceed_button" id="proceed_payment">Proceed</button>
+                </div>
+            </div>
+            <div class="tab" id="tab_payment">
+                <div class="tab_header">Payment</div>
+                <div class="tab_content">
+                    <p>How do you want to pay?</p>
+                    <input type="radio" name="payment" value="payment_credit" id="payment_credit"><label for="payment_credit">Credit Card</label><br>
+                    <input type="radio" name="payment" value="payment_online" id="payment_online"><label for="payment_online">Online account</label><br>
+                    <input type="radio" name="payment" value="payment_bank" id="payment_bank"><label for="payment_bank">Bank Transaction</label>
+                    <button class="proceed_button" id="proceed_overview">Proceed</button>
+                </div>
+            </div>
+            <div class="tab" id="tab_overview">
+                <div class="tab_header">Overview</div>
+                <div class="tab_content"><p>Please double check these details before confirming your order.</p>
+                    <p>Estimated delivery: <span class="label" id="delivery_date">0</span> working days</p>
+                    <table>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                        </tr>
+                        <tr>
+                            <td>1x FitByte Smart Watch</td>
+                            <td class="currency">$199.95</td>
+                        </tr>
+                        <tr>
+                            <td>1x Spilip Airfryer XXL</td>
+                            <td class="currency">$349.95</td>
+                        </tr>
+                        <tr class="shipping_costs">
+                            <td>Shipping costs</td>
+                            <td class="currency">$<span class="label" id="shipping_costs">0.0</span></td>
+                        </tr>
+                        <tr class="transaction_fee">
+                            <td>Transaction Fee</td>
+                            <td class="currency">$<span class="label" id="transaction_fee">0.0</span></td>
+                        </tr>
+                        <tr class="total">
+                            <td>Grand Total</td>
+                            <td class="currency">$<span class="label" id="total_price">0.0</span></td>
+                        </tr>
+                    </table>
+                    <p></p>
+                    <p>Coupon:</p>
+                    <input type="text" id="coupon" value="FREESHIPPING" />
+                    <button class="apply_coupon" id="apply_coupon">Apply</button>
+                    <button class="proceed_button" id="proceed_confirm">Confirm order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

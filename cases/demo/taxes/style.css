@@ -1,0 +1,45 @@
+#taxes .tab_content {
+    padding: 25px;
+}
+
+
+#taxes .question {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#taxes .question:first-child,
+#taxes h1:first-child {
+    margin-top: 0px;
+}
+
+#taxes h1 {
+    margin-top: 20px;
+}
+
+#taxes .tax_items {
+    display: table;
+    width: 100%;
+}
+
+#taxes .tax_item {
+    display: table-row;
+}
+
+#taxes .tax_item .tax_question {
+    font-weight: normal;
+    display: table-cell;
+    padding-right: 15px;
+}
+
+#taxes .tax_item .tax_answer {
+    width: 175px;
+    display: table-cell;
+    text-align: right;
+}
+
+#taxes .tax_item:after {
+    content: "";
+    display: table;
+    clear: both;
+}

@@ -1,0 +1,22 @@
+td * {
+    width: 100%;
+}
+
+#send_and_reset_mixed {
+    width: 155px;
+}
+
+#login .mixed .button .label {
+    text-align: center;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#login_button_mixed {
+    vertical-align: bottom;
+}
+
+.textbox {
+    vertical-align: top;
+    margin-top: -10px;
+}

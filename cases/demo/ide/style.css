@@ -1,0 +1,46 @@
+body {
+    overflow-x: hidden;
+}
+
+#ide .use_case {
+    width: 100%;
+}
+
+#ide .look_and_feel {
+    width: 100%;
+}
+
+#ide .tab_group {
+    width: 100%;
+}
+
+#ide .tab_contents {
+    border-radius: 0px;
+    display: block;
+}
+
+#ide .tab_content {
+    border-radius: 0px;
+    height: 450px;
+    overflow-y: auto;
+}
+
+.workload_category {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.workload_item {
+    width: 275px;
+}
+
+.workload_item .workload_title {
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.workload_item .workload_description {
+    font-size: 10px;
+    color: #333333;
+}

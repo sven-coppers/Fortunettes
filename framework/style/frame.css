@@ -1,0 +1,47 @@
+body {
+    font-family: Arial;
+}
+
+.frame {
+    margin: 10px;
+    border: 1px #000000 solid;
+    width: 420px;
+    padding: 5px;
+    padding-bottom: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+.clearfix {
+    clear: both;
+    heigth: 0px;
+    font-size: 0px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #666666;
+}
+
+.step {
+    border-radius: 6px;
+    width: 10px;
+    font-size: 10px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    left: 10px;
+    top: 3px;
+}

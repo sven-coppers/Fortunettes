@@ -1,0 +1,82 @@
+.mixed .radio_option {
+    margin-left: 5px;
+    margin-bottom: 3px;
+}
+
+.mixed .radio_option_label {
+    position: relative;
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.mixed .radio_option .layers {
+    position: relative;
+    display: inline-block;
+    /* height: 100%; Causing bugs */
+    vertical-align: text-top;
+}
+
+.mixed .radio_option .radio_option_circle {
+    height: 12px;
+    width: 12px;
+    border-radius: 6px;
+    position: absolute;
+    display: inline-block;
+    overflow: visible;
+}
+
+.mixed .radio_option .radio_option_circle.layer1 {
+    border: 1px solid rgb(166, 166, 166);
+    background: linear-gradient(rgb(237, 237, 237), rgb(222, 222, 222));
+    cursor: default;
+    position: relative;
+    display: inline-block;
+}
+
+.mixed .radio_option_inner_circle {
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    font-size: 11px;
+    width: 6px;
+    height: 6px;
+    border-radius: 4px;
+    background-color: rgb(102, 102, 102);
+    display: none;
+}
+
+.mixed .radio_option:not(.disabled) .radio_option_circle.layer1:hover {
+    background: linear-gradient(rgb(240, 240, 240), rgb(225, 225, 225));
+    border-color: rgb(153, 153, 153);
+}
+
+.mixed .radio_option:not(.disabled) .radio_option_circle.layer1:active {
+    background: linear-gradient(rgb(231, 231, 231), rgb(215, 215, 215));
+    border-color: rgb(161, 161, 161);
+}
+
+.mixed .radio_option.selected .layer1 .radio_option_inner_circle {
+    display: inline-block;
+}
+
+.mixed .radio_option.disabled .layer1 .radio_option_circle {
+    opacity: 0.45;
+}
+
+.mixed .radio_option .radio_option_circle.layer2 {
+    border: 1px solid black;
+    display: none;
+    top: -3px;
+    left: 3px;
+    z-index: -1;
+}
+
+.mixed .radio_option.feedforward_selected .radio_option_circle.layer2 {
+    background-color: rgb(150, 150, 150);
+    display: inline-block;
+}
+
+.mixed .radio_option.feedforward_deselected .radio_option_circle.layer2 {
+    background-color: white;
+    display: inline-block;
+}

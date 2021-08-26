@@ -1,0 +1,13 @@
+state_old,id,event,state_new
+S0,a,event_click,S1
+S0,b,event_click,S2
+S0,c,event_click,S8
+S1,b,event_click,S3
+S2,a,event_click,S4
+S2,d,event_click,S10
+S3,a,event_click,S5
+S3,c,event_click,S6
+S4,a,event_click,S7
+S4,c,event_click,S9
+S5,b,event_click,S0
+S7,b,event_click,S0

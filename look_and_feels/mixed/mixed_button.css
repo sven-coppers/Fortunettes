@@ -1,0 +1,80 @@
+.mixed .button {
+    border: none;
+    position: relative;
+    display: inline-block;
+    padding: 0px;
+    margin-right: 4px;
+    margin-top: 5px;
+    cursor: default;
+    margin-bottom: 10px;
+}
+
+.mixed .button .label {
+    font-size: 13px;
+    font-family: Arial;
+    padding-left: 8px;
+    padding-right: 6px;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+.mixed .button.disabled .label {
+    color: rgb(128, 128, 128);
+}
+
+.mixed .button .layer {
+    position: absolute;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    overflow: visible;
+    height: 100%;
+    width: 100%;
+}
+
+.mixed .button .layer1 {
+    top: 0px;
+    z-index: 0;
+
+    font-family: Arial;
+    border: 1px solid rgb(157, 157, 157);
+    background: linear-gradient(rgb(247, 247, 247), rgb(221, 221, 221));
+}
+
+.mixed .button:not(.disabled):active .layer1 {
+    color: black;
+    background: linear-gradient(rgb(221, 221, 221), rgb(247, 247, 247));
+}
+
+.mixed .button:not(.disabled):hover .layer1 {
+    border-color: rgb(118, 118, 118);
+}
+
+.mixed .button.disabled .layer1 {
+    color: rgb(128, 128, 128);
+}
+
+.mixed .button .layer2 {
+    top: -3px;
+    left: 3px;
+    z-index: -1;
+
+    border: 1px solid rgb(55, 55, 55);
+}
+
+.mixed .button .layer2.disabled {
+    border: 1px dashed #b4b4b4;
+}
+
+.mixed .button .layer.step {
+    background-color: rgb(64, 64, 64);
+    color: #ffffff;
+    width: auto;
+    height: 10px;
+    z-index: -1;
+    top: -10px;
+    padding-left: 3px;
+    padding-right: 3px;
+}

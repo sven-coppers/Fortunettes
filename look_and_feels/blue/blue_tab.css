@@ -1,0 +1,187 @@
+.blue .tab_group {
+
+}
+
+.blue .tab_contents {
+    border: 1px solid black;
+    border-radius: 4px;
+    border-top-left-radius: 0px;
+    position: relative; /* Needed for the limbo button to work */
+}
+
+.blue .tab_header {
+    border: 1px solid black;
+    padding: 6px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 4px;
+    display: inline-block;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin: 0px;
+    border-bottom: 0px;
+    border-left-width: 0px;
+    position: relative;
+    transition: background 0.10s ;
+}
+
+.blue .tab_header:first-child {
+    border-left: 1px solid black;
+}
+
+.blue .tab_header.selected {
+    background-color: dodgerblue;
+}
+
+.blue .tab_header.feedforward_selected {
+    background-color: #33c5ff;
+}
+
+.blue .tab_header.selected.feedforward_deselected {
+    background-color: darkgrey;
+}
+
+.blue .tab_header.disabled.feedforward_enabled {
+    border-color: #33c5ff;
+    border-style: solid;
+}
+
+.blue .tab_header.feedforward_disabled {
+    border-color: #555555;
+    border-style: dotted;
+    background-color: #f9f9f9;
+}
+
+.blue .tab_header.disabled {
+    border-color: #555555;
+    border-style: dotted;
+    background-color: #f9f9f9;
+}
+
+.blue .tab_header .tab_changes {
+    background-color: #006eb8;
+    border: 1px solid #006eb8;
+    color: white;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 12px;
+    width: 15px;
+    text-align: center;
+
+    position: absolute;
+    padding-right: 1px;
+    right: 5px;
+    top: 8px;
+}
+
+.blue .tab_header .tab_changes.acknowledgements {
+    background-color: darkgrey;
+    color: #ffffff;
+    border: 1px solid black;
+}
+
+.blue .tab_content {
+    padding: 10px;
+    position: relative;
+}
+
+.blue .tab_header .tab_changes.hidden,
+.blue .tab_changes_above.hidden,
+.blue .tab_changes_below.hidden {
+    display: none;
+}
+
+.blue .tab_header.selected .tab_changes {
+    display: none;
+}
+
+.blue .tab_changes_above {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    /* left: auto; */
+    text-align: center;
+    margin-left: -60px;
+    display: inline-block;
+    width: 120px;
+    z-index: 2;
+    font-size: 12px;
+    border: 1px solid #005997;
+    border-top-width: 0px;
+    color: #005997;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding-top: 3px;
+    padding-botton: 4px;
+    background-color: white;
+}
+
+
+.blue .tab_changes_below {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    text-align: center;
+    margin-left: -60px;
+    display: inline-block;
+    width: 120px;
+    z-index: 2;
+    font-size: 12px;
+    border: 1px solid #005997;
+    border-bottom-width: 0px;
+    color: #005997;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    padding-top: 3px;
+    padding-botton: 3px;
+    background-color: white;
+}
+
+.blue .tab_changes_locations {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 12px;
+    z-index: 2;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.blue .change_location {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+}
+
+.blue .change_location.changes {
+    background-color: #33c5ff;
+}
+
+/* Vertical alternative */
+
+.blue .tab_group.vertical .tab_headers {
+    float: left;
+}
+
+.blue .tab_group.vertical .tab_header {
+    display: block;
+    border: 1px solid black;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-radius: 0px;
+    width: 150px;
+    text-align: right;
+}
+
+.blue .tab_group.vertical .tab_header:first-child {
+    border-top-left-radius: 4px;
+}
+.blue .tab_group.vertical .tab_header:last-child {
+    border-bottom-left-radius: 4px;
+    border-bottom-width: 1px;
+}
+
+.blue .tab_group.vertical .tab_contents {
+    margin-left: 200px;
+}

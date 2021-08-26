@@ -1,0 +1,8 @@
+.blue .label {
+
+}
+
+.blue .label.feedforward {
+    color: #33c5ff;
+    font-weight: bold;
+}

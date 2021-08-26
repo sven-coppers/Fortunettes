@@ -1,0 +1,18 @@
+.blue select option {
+    background-color: white;
+}
+
+.blue select option:checked,
+.blue select:not(:focus) option:checked {
+    background-color: dodgerblue !important;
+}
+
+.blue select option.feedforward_selected,
+.blue select:not(:focus) option.feedforward_selected {
+    background-color: #33c5ff;
+}
+
+.blue select option:checked.feedforward_deselected,
+.blue select:not(:focus) option:checked.feedforward_deselected {
+    background-color: #a8a8a8 !important;
+}

@@ -1,0 +1,111 @@
+.blue .textbox {
+    border: 1px solid black;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.blue .textbox p {
+    margin-bottom: 0px;
+}
+
+.blue .textbox input {
+    border: none;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: 16px;
+    font-size: 16px;
+    position: relative;
+    width: 150px;
+}
+
+.blue .textbox input:focus {
+    outline: none;
+}
+
+.blue .textbox .placeholder {
+    height: 10px;
+}
+
+.blue .textbox .feedforward {
+    background-color: #eeeeee;
+}
+
+.blue .textbox .progress {
+    background-color: #33c5ff;
+    height: 1px;
+}
+
+.blue .textbox .old_value {
+    color: #999999;
+    font-size: 10px;
+    padding-left: 5px;
+    display: inline-block;
+    float: left;
+}
+
+.blue .textbox .new_value {
+    color: #999999;
+    font-size: 10px;
+    padding-right: 5px;
+    display: inline-block;
+    float: right;
+}
+
+.blue .textbox.disabled {
+    border-color: lightgrey;
+    color: lightgrey;
+    cursor: default;
+    border-style: dashed;
+}
+
+.blue .textbox.disabled input {
+    background-color: white;
+}
+
+.blue .textbox.feedforward_enabled {
+    border-color: #33c5ff;
+    border-style: solid;
+}
+
+.blue .textbox.feedforward_disabled {
+    border-color: #555555;
+    border-style: dashed;
+    background-color: #f9f9f9;
+}
+
+.blue .textbox .current_value {
+    display: inline-block;
+}
+
+.blue .textbox .next_value {
+    display: none;
+}
+
+.blue .textbox.feedforward_value .current_value {
+    display: none;
+}
+
+.blue .textbox.feedforward_value .next_value {
+    display: inline-block;
+    color: #33c5ff;
+    font-weight: bold;
+}
+
+.blue .textbox .changed {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #33c5ff;
+    font-size: 1px;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+    display: none;
+}
+
+.blue .textbox.not_acknowledged .changed {
+    display: inline-block;
+}

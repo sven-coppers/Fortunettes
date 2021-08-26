@@ -1,0 +1,31 @@
+table .total {
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+}
+
+table tr:first-child {
+    border-bottom: 2px solid grey;
+}
+
+table tr.total,
+table tr.transaction_fee,
+table tr.shipping_costs {
+     border-top: 2px solid grey;
+}
+
+.proceed_button {
+    float: right;
+    clear: right;
+}
+
+#webshop .look_and_feel {
+    width: 550px;
+}
+
+#webshop td.currency {
+    text-align: right;
+    width: 75px;
+}

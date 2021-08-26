@@ -1,0 +1,119 @@
+<div class="use_case" id="taxes">
+    <div class="look_and_feel">
+        <h1>Tax Declaration</h1>
+        <div class="tab_group vertical" id="tax_flow">
+            <div class="tab" id="tab_personal">
+                <div class="tab_header">Personal Information</div>
+                <div class="tab_content">
+                    <h1>Personal Information</h1>
+                    <p class="question">What was your marital status at 01.01.2018? </p>
+                    <input type="radio" name="marital_status" value="marital_status_single" id="marital_status_single"><label for="marital_status_single">Single</label><br>
+                    <input type="radio" name="marital_status" value="marital_status_married_jointly" id="marital_status_married_jointly"><label for="marital_status_married_jointly">Married filing jointly</label><br>
+                    <input type="radio" name="marital_status" value="marital_status_married_separately" id="marital_status_married_separately"><label for="marital_status_married_separately">Married filing separately</label><br>
+                    <input type="radio" name="marital_status" value="marital_status_head" id="marital_status_head"><label for="marital_status_head">Head of household</label><br>
+                    <input type="radio" name="marital_status" value="marital_status_divorced" id="marital_status_divorced"><label for="marital_status_divorced">Qualifying widow(er)</label><br>
+                    <p class="question">What is your standard deduction? </p>
+                    <input type="checkbox" name="deduction" value="deduction_dependent" id="deduction_dependent"><label for="deduction_dependent">Someone can claim you as a dependent</label><br>
+                    <input type="checkbox" name="deduction" value="deduction_born" id="deduction_born"><label for="deduction_born">You were born before January 2, 1954</label><br>
+                    <input type="checkbox" name="deduction" value="deduction_blind" id="deduction_blind"><label for="deduction_blind">You are blind</label><br>
+                </div>
+            </div>
+            <div class="tab" id="tab_income">
+                <div class="tab_header">Income</div>
+                <div class="tab_content">
+                    <h1>Income</h1>
+                    <div class="tax_items">
+                        <div class="tax_item">
+                            <div class="tax_question"><p>Wages, salaries, tips, etc. </p></div>
+                            <div class="tax_answer"><input type="text" id="line_1_wages" value="" /></div>
+                        </div>
+
+                        <div class="tax_item">
+                            <div class="tax_question"><p>Other Income</p></div>
+                            <div class="tax_answer"><input type="text" id="line_2_other_income" value="" /></div>
+                        </div>
+
+                        <div class="tax_item">
+                            <!-- line 3 = som van line 1 en line 2 -->
+                            <div class="tax_question"><p>Total Income</p></div>
+                            <div class="tax_answer"><input type="text" id="line_3_total_income" value="" /></div>
+                        </div>
+
+                        <div class="tax_item">
+                            <div class="tax_question"><p>Adjustments to income</p></div>
+                            <div class="tax_answer"><input type="text" id="line_4_adjustments" value="" /></div>
+                        </div>
+
+                        <div class="tax_item">
+                            <!-- line 7 = line 3 - line 4 -->
+                            <div class="tax_question"><p>Adjusted gross income</p></div>
+                            <div class="tax_answer"><input type="text" id="line_7_adjusted_gross_income" value="" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab" id="tab_taxes">
+                <div class="tab_header">Taxes</div>
+                <div class="tab_content">
+                    <h1>Taxes</h1>
+                    <div class="tax_items">
+                        <div class="tax_item">
+                            <!-- value based on marital_status -->
+                            <div class="tax_question"><p>Standard deduction</p></div>
+                            <div class="tax_answer"><input type="text" id="line_8_standard_deduction" value="" /></div>
+                        </div>
+
+                        <div class="tax_item">
+                            <!-- Substract line 8 from line 7, if zero or less, enter 0 -->
+                            <div class="tax_question"><p>Taxable income</p></div>
+                            <div class="tax_answer"><input type="text" id="line_10_taxable_income" value="" /></div>
+                        </div>
+
+                        <div class="tax_item">
+                            <div class="tax_question"><p>Child tax/credit for other dependents</p></div>
+                            <div class="tax_answer"><input type="text" id="line_12_children" value="" /></div>
+                        </div>
+
+                        <div class="tax_item">
+                            <div class="tax_question"><p>Other taxes</p></div>
+                            <div class="tax_answer"><input type="text" id="1040_14_other_taxes" value="" /></div>
+                        </div>
+
+                        <div class="tax_item">
+                            <!-- 0,25 * taxable income - 12 + 14-->
+                            <div class="tax_question"><p>Total taxes</p></div>
+                            <div class="tax_answer"><input type="text" id="1040_15_total_tax" value="" /></div>
+                        </div>
+
+                        <div class="tax_item">
+                            <div class="tax_question"><p>Federal income tax withheld</p></div>
+                            <div class="tax_answer"><input type="text" id="1040_16_federal_income" value="" /></div>
+                        </div>
+
+                        <div class="tax_item">
+                            <div class="tax_question"><p>Refundable credits</p></div>
+                            <div class="tax_answer"><input type="text" id="1040_17_refundable_credits" value="" /></div>
+                        </div>
+
+                        <div class="tax_item">
+                            <!-- add lines 16 and 17 -->
+                            <div class="tax_question"><p>These are your total payments.</p></div>
+                            <div class="tax_answer"><input type="text" id="1040_18_total_payments" value="" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab" id="tab_refund">
+                <div class="tab_header">Balance</div>
+                <div class="tab_content">
+                    <h1>Balance</h1>
+                    <button class="update_calculations" id="update_calculations">Update calculations</button>
+                    <p class="question">This is the amount you overpaid:</p>
+                    <input type="text" id="1040_19_total_overpaid" value="" />
+                    <p class="question">This is the amount you owe:</p>
+                    <input type="text" id="1040_22_total_due" value="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
